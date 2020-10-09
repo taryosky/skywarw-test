@@ -1,0 +1,70 @@
+// Place all the styles related to the app controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "P24-SourceSans",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    /* line-height: 22px; */
+    color: #515b6d;
+    background-color: #f6f6f6;
+    padding-top: 20px;
+}
+
+#form-container{
+    box-shadow: 0px 0px 9px black;
+    padding: 16px;   
+}
+#form-container, #notes{
+    width: 500px;
+    margin: 10px auto;
+    background: f1f1f1; 
+}
+
+.notice, .error{
+    padding: 10px 16px;
+    color: white;
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+.notice{
+    background-color: rgba(0, 255, 0, .5);
+}
+.error{
+    background-color: rgba(255, 0, 0, .5);
+}
+
+.clear{
+    display: none;
+    opacity: 0
+}
+
+input, #employ_reference, option{
+    width: 100%;
+    padding: 7px 7px;
+    border: 1px solid gray;
+    margin: 10px 0;
+    background-color: transparent;
+}
+
+label{
+    margin-bottom: 20px;
+}
+
+.select{
+    display: inline-block;
+    width: 200%
+}
+
+input[type=submit]{
+    background-color: black;
+    border: none;
+    color: white;
+    width: 150px;
+    box-shadow: 3px 0px 5px black;
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+<div id="notes">
+  <h1 style="text-align: center;">Skyware Pre-interview Test</h1>
+  <h3 style="border-bottom: 1px solid black;">Note</h3>
+    <ol>
+        <li>This is based on the pre interview test specification</li>
+        <li>The informations collected are basic and are just for test purpose</li>
+        <li>The system is design to accomodate members up to the third generation only</li>
+        <li>Modifications can be made to accept more generations if need be</li>
+        <li>This app was developed using the rails framework</li>
+    </ol>
+</div>
+<div id="form-container">
+    <h1 style="text-align:center">New Member</h1>
+    <% if flash[:notice] %>
+      <p id="notice" class="notice">Registration Successful</p>
+    <% end %>
+    <% if flash[:error] %>
+      <p id="notice" class="error"><%= flash[:error] %></p>
+    <% end %>
+    <%= form_for :employ, method: :post, url: create_path do |f| %>
+      <%= f.label :fname, "First Name" %><br>
+      <%= f.text_field :fname, placeholder: "First Name", required: true,  autofocus: true %><br>
+      <%= f.label :lname, "Surname" %><br>
+      <%= f.text_field :lname, placeholder: "Surname", required: true %><br>
+      <%= f.label :email, "Email" %><br>
+      <%= f.email_field :email, placeholder: "Enter Email", required: true %><br>
+      <% if !@free.empty? %>
+        <%= f.label :refer, "Referer" %><br>
+        <%= f.select :reference, @free, class: "select" %>
+      <% end %>
+      <%= f.submit "Submit" %>
+    <% end %>
+</div>
